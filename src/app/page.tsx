@@ -1,5 +1,4 @@
 import personDev from "@/images/person-dev.png";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import RootLayout from "./layout";
@@ -13,21 +12,17 @@ async function getProfile() {
   };
 }
 
+export const metadata = {
+  title: "Do Minh Vuong",
+  description: 'Welcome to my portfolio'
+}
+
 export default async function Home() {
   const profile = await getProfile();
   console.log("profile", profile);
   return (
     <RootLayout>
-      <div>
-        <Head>
-          <title>Do Minh Vuong Portfolio</title>
-          <meta
-            property="og:title"
-            content="Do Minh Vuong Portfolio"
-            key="title"
-          />
-        </Head>
-        <main>
+      <main>
           <section className="flex justify-around my-8">
             <div className="flex-col space-y-6">
               <h2>
@@ -54,7 +49,6 @@ export default async function Home() {
             </div>
           </section>
         </main>
-      </div>
     </RootLayout>
   );
 }
