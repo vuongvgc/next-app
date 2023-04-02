@@ -44,7 +44,7 @@ export default async function Home() {
                 width="468"
               />
               <div>
-                <p>Currently working on Manabie - Edutech </p>
+                <p>Currently working on Manabie - Edutech -more</p>
               </div>
             </div>
           </section>
